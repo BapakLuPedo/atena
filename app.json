@@ -1,0 +1,11 @@
+{
+  "name": "Atena-san",
+  "description": "Atena-san by Khael recode from Fadli",
+  "repository": "https://github.com/ariffb25/stikerinbot",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": [
+    "bot",
+    "whatsapp",
+    "whatsapp-bot"
+  ]
+}
