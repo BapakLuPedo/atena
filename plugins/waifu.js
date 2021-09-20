@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn }) => {
-  let res = await fetch('lolhum', '/api/random/waifu', {}, 'APIKEY'))
+  let res = await fetch(global.API('lolhum', '/api/random/waifu', {}, 'APIKEY'))
   if (!res.ok) throw eror
   let img = await res.buffer()
   if (!img) throw img
