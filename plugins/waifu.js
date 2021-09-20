@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
   if (!res.ok) throw eror
   let img = await res.buffer()
   if (!img) throw img
-  conn.sendButtonImg(m.chat, 'Nih Waifunya', img, watermark, '⏩Get Again', '.waifu')
+  conn.sendButtonImg(m.chat, 'Nih Waifunya', img, watermark, '⏩Get Again', '.waifu', m)
 }
 handler.help = ['waifu']
 handler.tags = ['internet']
