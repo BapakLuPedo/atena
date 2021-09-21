@@ -24,7 +24,7 @@ handler.before = async function (m) {
                 while (levelling.canLevelUp(user.level, user.exp, global.multiplier)) user.level++
 
                 if (before !== user.level) {
-                        let rank = 'https://telegra.ph/file/ef7616cb5309cec3a2c52.jpg'
+                        let rank = 'https://telegra.ph/file/fac9bff8e0098e8d7cc30.jpg'
                         {
                                         await this.sendButtonLoc(m.chat, await (await fetch(rank)).buffer(), `Level Up!\n_${before}_ -> ${user.level}`.trim(), watermark, 'DAILY', '.daily')
                                 }
