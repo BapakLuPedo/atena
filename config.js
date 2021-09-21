@@ -1,5 +1,5 @@
 let fs = require('fs')
-global.owner = ['6282248192917'] // Letakan nomor kamu disini
+global.owner = ['6282248192917', '628112958665'] // Letakan nomor kamu disini
 global.mods = [] // Moderator?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
 global.APIs = { // API Prefix
@@ -42,7 +42,7 @@ global.eror = '「❗」 *SERVER ERROR*'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.watermark = '©Atena-san'
 
-global.multiplier = 89 // Semakin tinggi, semakin sulit naik level
+global.multiplier = 59 // Semakin tinggi, semakin sulit naik level
 
 let chalk = require('chalk')
 let file = require.resolve(__filename)
