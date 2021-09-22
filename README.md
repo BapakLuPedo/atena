@@ -136,6 +136,6 @@ conn.logger.level = 'debug'
 ---------
 
  [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Ariffb](https://github.com/ariffb25.png?size=100)](https://github.com/ariffb25) | [![FadliDarmawan](https://github.com/FadliDarmawan.png?size=100)](https://github.com/FadliDarmawan) | [![Ariffb](https://github.com/KhaelSan.png?size=100)](https://github.com/KhaelSan)
-----|----|----|----|----
+----|----|----|----
 [Nurutomo](https://github.com/Nurutomo) | [Ariffb](https://github.com/ariffb25) | [FadliDarmawan](https://github.com/FadliDarmawan) | [KhaelSan](https://github.com/KhaelSan)
  Penulis / Pencipta | Penulis ulang | Owner Haruno | Owner Atena
