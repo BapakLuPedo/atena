@@ -4,11 +4,11 @@
 <h1 align="center">Atena-san By Khael, recode from Haruno</h1>
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KhaelSan/atena)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KhaelSan/haruno)
 
-[![Run on Repl.it](https://repl.it/badge/github/KhaelSan/atena)](https://repl.it/github/Khaelsan/atena)
+[![Run on Repl.it](https://repl.it/badge/github/KhaelSan/haruno)](https://repl.it/github/Khaelsan/haruno)
 
-[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GtCjnCu4F8Z78Mm6HX8GYA)
+[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/LIX42RUhLi15MBXhfvrF6K)
 
 ## UNTUK PENGGUNA TERMUX/UBUNTU/SSH
 
@@ -135,7 +135,7 @@ conn.logger.level = 'debug'
 
 ---------
 
- [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Ariffb](https://github.com/ariffb25.png?size=100)](https://github.com/ariffb25)
+ [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Ariffb](https://github.com/ariffb25.png?size=100)](https://github.com/ariffb25) | [![FadliDarmawan](https://github.com/FadliDarmawan.png?size=100)](https://github.com/FadliDarmawan)
 ----|----
-[Nurutomo](https://github.com/Nurutomo) | [Ariffb](https://github.com/ariffb25)
- Penulis / Pencipta | Penulis ulang
+[Nurutomo](https://github.com/Nurutomo) | [Ariffb](https://github.com/ariffb25) | [FadliDarmawan](https://github.com/FadliDarmawan)
+ Penulis / Pencipta | Penulis ulang | Owner Haruno
