@@ -78,7 +78,7 @@ ${usedPrefix + command} elf
                 case 'biganimetiddies':
                 case 'animebellybutton':
                 case 'hentai4everyone':
-		if(!handler.nsfw === true ) return m.reply('「❗」 *Fitur Nsfw Mati*') // or if(handler.nsfw === false ) return m.reply('「❗」 *Fitur Nsfw Mati*')
+		/*if(!handler.nsfw === true ) return m.reply('「❗」 *Fitur Nsfw Mati*') // or if(handler.nsfw === false ) return m.reply('「❗」 *Fitur Nsfw Mati*')*/
 			let res = await fetch(global.API('lolhum', '/api/random/nsfw/' + args[0].toLowerCase(), {}, 'apikey'))
 			m.reply(global.wait)
 				if (!res.ok) throw await res.text()
