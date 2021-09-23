@@ -1,13 +1,16 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn }) => {
-  let res = await fetch('https://api.waifu.pics/sfw/neko')
-  if (!res.ok) throw eror
-  let json = await res.json()
-  if (!json.url) throw 'Eror!'
-  conn.sendFile(m.chat, json.url, '', watermark, m, 0, { thumbnail: await (await fetch(json.url)).buffer() })
-}
+let handler = async (m, { conn, usedPrefix }) => {
+	let res = await fetch(global.API('lolhum', '/api/random/neko', {}, 'apikey'))
+	m.reply(global.wait)
+    if (!res.ok) throw await res.text()
+    let img = await res.buffer()
+    if (!img) throw img
+    conn.sendButtonImg(m.chat, await(img), 'Ichi ni san Nyaan~', watermark, '⏩Get Again', `${usedPrefix}neko`, m)
+	}
+
 handler.help = ['neko']
 handler.tags = ['internet']
-handler.command = /^neko$/i
+handler.command = /^(neko)$/i
+
 
 module.exports = handler
