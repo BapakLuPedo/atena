@@ -8,7 +8,7 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/KhaelSan/haruno)](https://repl.it/github/Khaelsan/haruno)
 
-[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/LIX42RUhLi15MBXhfvrF6K)
+[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GtCjnCu4F8Z78Mm6HX8GYA)
 
 ## UNTUK PENGGUNA TERMUX/UBUNTU/SSH
 
