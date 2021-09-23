@@ -1,8 +1,9 @@
+/*cmd by khaelSan*/
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let er = `
-┌〔 List Gacha 〕
+┌〔 Gacha 〕
 ├ waifu
 ├ husbu
 ├ neko
@@ -21,10 +22,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 example:
 ${usedPrefix + command} elf
     `.trim()
-		if (!args[0]) throw er
+	if (!args[0]) throw er
 
     switch (args[0].toLowerCase()) {
-    	/*Gacha time*/
         case 'waifu':
         case 'husbu':
         case 'neko':
@@ -33,13 +33,13 @@ ${usedPrefix + command} elf
         case 'shota':
         case 'sagiri':
         case 'kanna':
-        case 'elaina': /*wangy wangy hu ha hu ha🥵*/
+        case 'elaina':
         case 'shinobu':
         case 'megumin':
         case 'art':
         case 'wallnime':
 		let res = await fetch(global.API('lolhum', '/api/random/' + args[0].toLowerCase(), {}, 'apikey'))
-		m.reply(global.wait)
+		await m.reply(global.wait)
 			if (!res.ok) throw await res.text()
 			let img = await res.buffer()
 			if (!img) throw img
