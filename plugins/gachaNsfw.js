@@ -33,9 +33,9 @@ ${usedPrefix + command} ecchi
 
     switch (args[0].toLowerCase()) {
                 case 'waifu':
-        		case 'neko':
-        		case 'loli':
-        		case 'chiisaihentai':
+        	case 'neko':
+        	case 'loli':
+        	case 'chiisaihentai':
                 case 'trap':
                 case 'yaoi':
                 case 'ecchi':
@@ -68,6 +68,7 @@ handler.help = ['nsfwgacha'].map(v => v + ' <teks>')
 handler.tags = ['gacha']
 handler.command = /^nsfwgacha$/i
 
+handler.nsfw = true
 handler.limit = true
 
 module.exports = handler
