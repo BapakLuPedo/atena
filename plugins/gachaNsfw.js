@@ -2,29 +2,29 @@ let fetch = require('node-fetch')
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let er = `
- Gacha Nsfw 
- waifu
- neko
- loli
- chiisaihentai
- trap
- yaoi
- ecchi
- hentai
- ahegao
- hololewd
- sideoppai
- animefeets
- animebooty
- animethighss
- hentaiparadise
- animearmpits
- hentaifemdom
- lewdanimegirls
- biganimetiddies
- animebellybutton
- hentai4everyone
-
+┌〔 Gacha Nsfw 〕
+├ waifu
+├ neko
+├ loli
+├ chiisaihentai
+├ trap
+├ yaoi
+├ ecchi
+├ hentai
+├ ahegao
+├ hololewd
+├ sideoppai
+├ animefeets
+├ animebooty
+├ animethighss
+├ hentaiparadise
+├ animearmpits
+├ hentaifemdom
+├ lewdanimegirls
+├ biganimetiddies
+├ animebellybutton
+├ hentai4everyone
+└────
 
 example:
 ${usedPrefix + command} ecchi
@@ -58,7 +58,7 @@ ${usedPrefix + command} ecchi
 			if (!res.ok) throw await res.text()
 			let img = await res.buffer()
 			if (!img) throw img
-				conn.sendButtonImg(m.chat, await(img), 'Hayoo ngapain gosok hp ke tytyd', watermark, 'Ngocok Lagi', `${usedPrefix}nsfwgacha ` + args[0].toLowerCase(), m)
+				conn.sendButtonImg(m.chat, await(img), 'Hayoo ngapain gosok hp ke tytyd', watermark, '💦Ngocok Lagi', `${usedPrefix}nsfwgacha ` + args[0].toLowerCase(), m)
             	break
         default:
             throw er
@@ -71,3 +71,4 @@ handler.command = /^nsfwgacha$/i
 handler.limit = true
 
 module.exports = handler
+//Credit: By KhaelSan
