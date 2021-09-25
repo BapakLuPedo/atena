@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 
 let handler = async (m, {conn, command, text, usedPrefix }) => {
 	if(!text) throw `uhm.. cari anime apa?\n\nContoh:\n${usedPrefix + command} Tejina senpai`
-	let res = await fetch(global.API('lolhum', '/api/kusonimesearch/', { text }, 'apikey'))
+	let res = await fetch(global.API('lolhum', '/api/kusonimesearch/', 'apikey', { text } ))
 	let { title, thumbnail, japanese, genre, seasons, producers, type, status, total_episode, score, duration, released_on, link_dl } = res
 		await m.reply(global.wait)
 			if (!res.ok) throw await res.text()
