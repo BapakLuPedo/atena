@@ -18,7 +18,7 @@ apt install git -y
 apt install nodejs -y
 apt install ffmpeg -y
 apt install imagemagick -y
-git clone https://github.com/KhaelSan/atena-san
+git clone https://github.com/KhaelSan/atena
 cd atena-san
 npm install
 npm start
