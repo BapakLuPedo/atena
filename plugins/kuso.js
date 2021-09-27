@@ -26,7 +26,8 @@ let handler = async (m, {conn, command, text, usedPrefix }) => {
                         }
                     }
   	              let caption = `*〔 Kusonime 〕*\n\n` + ini_txt + `\n\n❲ Follow ❳\nhttps://www.instagram.com/khaelll._/`
-  			conn.sendFile(m.chat, thumbnail, 'kuso.png', caption, m, 0, { thumbnail: await (await fetch(thumbnail)).buffer() })
+				m.reply(caption)
+  			//conn.sendFile(m.chat, thumbnail, 'kuso.png', caption, m, 0, { thumbnail: await (await fetch(thumbnail)).buffer() })
 					})
 }
 
