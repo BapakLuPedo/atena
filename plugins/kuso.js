@@ -4,9 +4,9 @@ let handler = async (m, {conn, command, text, usedPrefix }) => {
 	if(!text) throw `uhm.. cari anime apa?\n\nContoh:\n${usedPrefix + command} Tejina senpai`
 	let res = await fetch(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=pemburuBansos&query=${text}`)
 	let { title, thumbnail, japanese, genre, seasons, producers, type, status, total_episode, score, duration, released_on, link_dl } = res
-			let img = await thumbnail.buffer()
-			if (!img) throw img
-		await m.reply(global.wait)
+			let img = await fetch(thumbnail)
+			//if (!img) throw img
+		//await m.reply(global.wait)
 			if (!res.ok) throw await res.text()
 					ini_txt = `*Title :* ${title}\n`
 					ini_txt += `*Japanese :* ${japanese}\n`
@@ -27,7 +27,8 @@ let handler = async (m, {conn, command, text, usedPrefix }) => {
                         }
                     }
   	              let caption = `*〔 Kusonime 〕*\n\n` + ini_txt + `\n\n❲ Follow ❳\nhttps://www.instagram.com/khaelll._/`
-  			conn.sendFile(m.chat, img, 'kuso.png', caption, m, 0, { thumbnail: await (await fetch(img)).buffer() })
+					m.reply(caption)
+  			// conn.sendFile(m.chat, img, 'kuso.png', caption, m, 0, { thumbnail: await (await fetch(img)).buffer() })
 }
 
 handler.help = ['kusonime'].map(v => v + ' <query>')
