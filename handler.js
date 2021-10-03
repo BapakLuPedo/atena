@@ -392,14 +392,15 @@ module.exports = {
             for (let user of participants) {
               // let pp = './src/avatar_contact.png'
               let pp = 'https://telegra.ph/file/7a6fa558e0edb48df6613.jpg'
+              let ppbg = 'https://telegra.ph/file/e3aea39833e3b12c8d561.jpg'
               try {
                 pp = await uploadImage(await (await fetch(await this.getProfilePicture(user))).buffer())
               } catch (e) {
               } finally {
                 text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Selamat datang, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc) :
                   (chat.sBye || this.bye || conn.bye || 'Sampai jumpa, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-                let wel = `https://hardianto-chan.herokuapp.com/api/tools/welcomer?nama=${encodeURIComponent(this.getName(user))}&namaGb=${encodeURIComponent(this.getName(jid))}n&pepeGb=https://telegra.ph/file/3ff7273ff27c43e8e950a.jpg&totalMem=${encodeURIComponent(groupMetadata.participants.length)}&pepeUser=${pp}&bege=https://telegra.ph/file/e3aea39833e3b12c8d561.jpg&apikey=hardianto`
-                let lea = `https://hardianto-chan.herokuapp.com/api/tools/leave?nama=${encodeURIComponent(this.getName(user))}&namaGb=${encodeURIComponent(this.getName(jid))}&pepeGb=https://telegra.ph/file/3ff7273ff27c43e8e950a.jpg&totalMem=${encodeURIComponent(groupMetadata.participants.length)}&pepeUser=${pp}&bege=https://telegra.ph/file/e3aea39833e3b12c8d561.jpg&apikey=hardianto`
+                let wel = `https://hardianto-chan.herokuapp.com/api/tools/welcomer2?name=${encodeURIComponent(this.getName(user))}&descriminator=${user.split(`@`)[0].substr(-5)}&totalmem=${encodeURIComponent(groupMetadata.participants.length)}&namegb=${encodeURIComponent(this.getName(jid))}&ppuser=${pp}&background=${ppbg}&apikey=hardianto`
+                let lea = `https://hardianto-chan.herokuapp.com/api/tools/leave2?name=${encodeURIComponent(this.getName(user))}&descriminator=${user.split(`@`)[0].substr(-5)}&totalmem=${encodeURIComponent(groupMetadata.participants.length)}&namegb= ${encodeURIComponent(this.getName(jid))}&ppuser=${pp}&background=${ppbg}&apikey=hardianto`
   
                 this.sendFile(jid, action === 'add' ? wel : lea, 'pp.jpg', text, null, false, {
                   thumbnail: await (await fetch(action === 'add' ? wel : lea)).buffer(),
@@ -478,7 +479,7 @@ global.dfail = (type, m, conn) => {
     group: '「❕」 _Only in Group Chat_',
     private: '「❕」 _Only in Private Chat_',
     admin: '「❕」 _Only Admin Group_',
-    botAdmin: '「❗」 *Make Bot As Admin*',
+    botAdmin: '「❗」 *Bot is not Admin*',
     unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Arif.19*',
     nsfw: '「❗」 *Fitur Nsfw Mati*',
   }[type]
