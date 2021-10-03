@@ -1,5 +1,5 @@
 let fs = require('fs')
-global.owner = ['6282248192917', '6285904398191', '628114811363'] // Letakan nomor kamu disini
+global.owner = ['6282248192917', '628114811363'] // Letakan nomor kamu disini
 global.mods = [] // Moderator?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
 global.APIs = { // API Prefix
@@ -27,22 +27,22 @@ global.APIKeys = { // APIKey nya disini
   'https://api.xteam.xyz': 'apikey lu',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'ShiroNeko',
-  'https://api.lolhuman.xyz': 'SquidGames',
+  'https://api.lolhuman.xyz': 'pemburuBansos',
   'https://api.vhtear.com': 'apikey lu',
-  'https://fxc7-api.herokuapp.com': 'apikey lu',
+  'https://fxc7-api.herokuapp.com': 'fxc7COOL',
   'https://api.justaqul.xyz': 'apikey lu'
 }
 
 // Sticker WM
-global.packname = '〔 Atena 〕\nby @khael'
+global.packname = 'Atena wangy'
 global.author = '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
 
-global.wait = '「❕」 _LOADING_'
-global.eror = '「❗」 SERVER ERROR'
+global.wait = '「❕」 _WAIT LOADING_'
+global.eror = '「❗」 *SERVER ERROR*'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.watermark = '©Atena-san'
 
-global.multiplier = 10 // Semakin tinggi, semakin sulit naik level
+global.multiplier = 19 // Semakin tinggi, semakin sulit naik level
 
 let chalk = require('chalk')
 let file = require.resolve(__filename)
