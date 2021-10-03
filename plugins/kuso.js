@@ -4,7 +4,7 @@ let axios = require('axios')
 let handler = async (m, {conn, command, text, usedPrefix }) => {
 	if(!text) throw `uhm.. cari anime apa?\n\nContoh:\n${usedPrefix + command} Tejina senpai`
 	m.reply(global.wait)
-	axios.get(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=pemburuBansos&query=${text}`)
+	axios.get(global.API('lolhum', '/api/kusonimesearch', {query: text}, 'apikey'))
   	              .then(({data}) => {
      	           let { title, thumbnail, japanese, genre, seasons, producers, type, status, total_episode, score, duration, released_on, link_dl } = data.result
 					ini_txt = `*Title :* ${title}\n`
