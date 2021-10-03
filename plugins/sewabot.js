@@ -8,10 +8,9 @@ let handler = async(m, { conn }) => {
 │©atena
 │
 ├〔 Payments 〕
-│GoPay: 628112958665
-│Dana: 628112958665
-│OVO: 628112958665
-│Pulsa (Tsel): 6282247192917 (+5.000) [closed]
+│Dana: 6282248192917
+│OVO: 6282248192917
+│Pulsa (Tsel): 6282248192917 (+5.000) [closed]
 └───
     
 「Syarat dan Ketentuan」
