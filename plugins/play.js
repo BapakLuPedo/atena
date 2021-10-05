@@ -1,27 +1,42 @@
+const { servers, yta, ytv } = require('../lib/y2mate')
+let yts = require('yt-search')
 let fetch = require('node-fetch')
-let handler = async(m, { conn, usedPrefix, command, args }) => {
-    if (!args[0]) throw `Masukkan query.\nContoh: ${usedPrefix + command} atena san`
-    let res = await fetch(global.API('lolhum', '/api/ytplay', { query: args[0] }, 'apikey'))
-    if (!res.ok) throw await res.text()
-    let json = await res.json()
-    m.reply(global.wait)
-    let thumbnail = await(await fetch(`${json.result.info.thumbnail}`)).buffer()
-    let atena = `
-YTPlay
-Title: *${json.result.info.title}*
-MP3 filesize: *${json.result.audio.size}*
-MP4 filesize: *${json.result.video.size}*
-`.trim()
-    if (!args[1]) await conn.send2ButtonLoc(m.chat, await(await fetch(`${json.result.info.thumbnail}`)).buffer(), atena, watermark, 'Audio', `.play ${args[0]} audio`, 'Video', `.play ${args[0]} video, m`)
-    if (args[1] === 'audio') {
-        m.reply(global.wait)
-        await conn.sendFile(m.chat, `${json.result.audio.link}`, 'audio.mp3', '', m)
-    } else if (args[1] === 'video') {
-        m.reply(global.wait)
-        await conn.sendFile(m.chat, `${json.result.video.link}`, 'video.mp4', '', m, 0, { thumbnail })
+let handler = async (m, { conn, command, text, usedPrefix }) => {
+  if (!text) throw `uhm.. cari apa?\n\ncontoh:\n${usedPrefix + command} california`
+  let chat = global.db.data.chats[m.chat]
+  let results = await yts(text)
+  let vid = results.all.find(video => video.seconds < 3600)
+  if (!vid) throw 'Konten Tidak ditemukan'
+  let isVideo = /2$/.test(command)
+  let yt = false
+  let yt2 = false
+  let usedServer = servers[0]
+  for (let i in servers) {
+    let server = servers[i]
+    try {
+      yt = await yta(vid.url, server)
+      yt2 = await ytv(vid.url, server)
+      usedServer = server
+      break
+    } catch (e) {
+      m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
     }
+  }
+  if (yt === false) throw 'semua server gagal'
+  if (yt2 === false) throw 'semua server gagal'
+  let { dl_link, thumb, title, filesize, filesizeF } = yt
+  await conn.send2ButtonLoc(m.chat, await (await fetch(thumb)).buffer(), `
+*〔YT PLAY〕*
+*Judul:* ${title}
+*Ukuran File Audio:* ${filesizeF}
+*Ukuran File Video:* ${yt2.filesizeF}
+*Server y2mate:* ${usedServer}
+`.trim(), watermark, 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`)
 }
-handler.command = /^play$/i
+handler.help = ['play'].map(v => v + ' <query>')
 handler.tags = ['downloader']
-handler.help = ['play <query>']
+handler.command = /^(p|play)$/i
+
+handler.exp = 0
+
 module.exports = handler
