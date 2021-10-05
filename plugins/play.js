@@ -2,7 +2,6 @@ let fetch = require('node-fetch')
 let handler = async(m, { conn, usedPrefix, command, args }) => {
     if (!args[0]) throw `Masukkan query.\nContoh: ${usedPrefix + command} atena san`
     let res = await fetch(global.API('lolhum', '/api/ytplay', { query: args[0] }, 'apikey'))
-    if (!res.ok) throw error
     if (!res.ok) throw await res.text()
     let json = await res.json()
     m.reply(global.wait)
