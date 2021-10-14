@@ -1,6 +1,6 @@
 {
   "name": "Atena-BotWa",
-  "version": "BETA",
+  "version": "0.0.0",
   "description": "Lightweight WhatsApp Bot",
   "main": "index.js",
   "scripts": {
