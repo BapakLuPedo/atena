@@ -4,9 +4,9 @@
 <h1 align="center">Atena-san By Khael, recode from Haruno</h1>
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KhaelSan/haruno)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KhaelSan/atena)
 
-[![Run on Repl.it](https://repl.it/badge/github/KhaelSan/haruno)](https://repl.it/github/Khaelsan/haruno)
+[![Run on Repl.it](https://repl.it/badge/github/KhaelSan/atena)](https://repl.it/github/Khaelsan/atena)
 
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GtCjnCu4F8Z78Mm6HX8GYA)
 
