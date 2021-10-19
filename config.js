@@ -27,7 +27,7 @@ global.APIKeys = { // APIKey nya disini
   'https://api.xteam.xyz': 'apikey lu',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'ShiroNeko',
-  'https://api.lolhuman.xyz': 'pemburuBansos',
+  'https://api.lolhuman.xyz': '929b48b9aa5a91abed8526cd',
   'https://api.vhtear.com': 'apikey lu',
   'https://fxc7-api.herokuapp.com': 'fxc7COOL',
   'https://api.justaqul.xyz': 'apikey lu'
